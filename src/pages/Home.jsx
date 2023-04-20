@@ -24,7 +24,7 @@ function Home() {
         }
       );
       toast.success(data.message);
-      setRefresh(!refresh);
+      setRefresh((prev) => !prev);
     } catch (error) {
       toast.error(error.response.data.message);
     }
@@ -36,7 +36,7 @@ function Home() {
         withCredentials: true,
       });
       toast.success(data.message);
-      setRefresh(!refresh);
+      setRefresh((prev) => !prev);
     } catch (error) {
       toast.error(error.response.data.message);
     }
@@ -63,7 +63,7 @@ function Home() {
       setDescription('');
       toast.success(data.message);
       setLoading(false);
-      setRefresh(!refresh);
+      setRefresh((prev) => !prev);
     } catch (error) {
       toast.error(error.response.data.message);
       setLoading(false);
