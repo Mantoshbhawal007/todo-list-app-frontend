@@ -31,7 +31,7 @@ function Header() {
       </div>
       <article>
         <Link to={'/'}>Home</Link>
-        <Link to={'/profile'}>Profile</Link>
+        {/* <Link to={'/profile'}>Profile</Link> */}
         {isAuthenticated ? (
           <button disabled={loading} onClick={logoutHandler} className="btn">
             Logout
